@@ -3,7 +3,7 @@ const chalk = require('chalk');
 module.exports = (data, option) => {
 	switch (option) {
 		case "warn":
-			console.log(chalk.bold.hex("#FF7F50")('[ ❕ ] » ') + data);
+			console.log(chalk.bold.hex("#00FF00")('[ ❕ ] » ') + data);
 			break;
 		case "error":
 			console.log(chalk.bold.hex("#FF0000")('[ ❗ Lỗi rồi ] » ') + data);
@@ -17,13 +17,13 @@ module.exports = (data, option) => {
 module.exports.loader = (data, option) => {
 	switch (option) {
 		case "warn":
-			console.log(chalk.bold.hex("#FFFF00")('» •CDAT• « ') + data);
+			console.log(chalk.bold.hex("#66FF00")('» •CHUNGDAT• « ') + data);
 			break;
 		case "error":
-			console.log(chalk.bold.hex("#FF0000")('» •CDAT• « ') + data);
+			console.log(chalk.bold.hex("#FF0000")('» •CHUNGDAT• « ') + data);
 			break;
 		default:
-			console.log(chalk.bold.hex("#00FFFF")('» •CDAT• « ') + data);
+			console.log(chalk.bold.hex("#3399CC")('» •CHUNGDAT• « ') + data);
 			break;
 	}
 }
