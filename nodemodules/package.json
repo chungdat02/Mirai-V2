@@ -1,0 +1,29 @@
+{
+  "name": "nodemodules",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Catalizcs",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^13.2.0",
+    "fast-speedtest-api": "^0.3.2",
+    "gif-frames": "^1.0.1",
+    "gifencoder": "^2.0.1",
+    "node-superfetch": "^0.2.3",
+    "pidusage": "^2.0.21",
+    "qrcode": "^1.4.4",
+    "sagiri": "^3.1.1",
+    "simple-youtube-api": "^5.2.1",
+    "srod-v2": "^1.0.2",
+    "systeminformation": "^5.9.3",
+    "tesseract.js": "^2.1.5",
+    "tiktok-scraper": "^1.4.36",
+    "tinyurl": "^1.1.7",
+    "wikijs": "^6.3.2",
+    "ytdl-core": "^4.9.1"
+  }
+}
