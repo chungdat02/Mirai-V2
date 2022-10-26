@@ -1,20 +1,15 @@
-#Cao Chung Đạt(BoK)
+# Cao Chung Đạt(BoK)
 # Miraibot
-# Các bước tạo bot:
-# +B1: npm i
-# +B2: npm i sqlite3
-# +B3: npm i canvas@2.9.0 (có nh` bản canvas nh tui dùng bản 2.9.0)
-# +B4: npm i ytdl-core (này là để hỗ trợ cho module sing + video)
-# +B5: npm i emoji-unicode (này để hỗ trợ module emojimix (ghép icon))
-# +B6: npm i axios
-# +B7: npm start
-#
-#
-# Cách ẩn appstate (lưu ý: phk cho bot load để có node_modules rồi tắt bot ẩn appstate sau):
-# B1: vô shell
-# B2: Nhập mkdir node_modules/accountbot (tệp để ẩn appstate vô)
-# B3: Nhập mv -f appstate.json node_modules/accountbot (dịch chuyển appstate vô tệp để ẩn appstate)
-# B4: vô config.js thay đầu nhận appstate.json thành node_modules/accountbot/appstate.json
-#
+# Các bước khởi chạy:
+#===/// LƯU Ý: CHẠY Ở SHELL GIÚP ///===#
+# ==> B1: npm i
+# ==> B2: npm i fca-horizon-remake
+# ==> B3: npm i sqlite3
+# ==> B4: npm i canvas@2.9.0 (có nh` bản canvas nh tui dùng bản 2.9.0)
+# ==> B5: npm i ytdl-core (này là để hỗ trợ cho module sing + video)
+# ==> B6: npm i emoji-unicode (này để hỗ trợ module emojimix (ghép icon))
+# ==> B7: npm i axios
+# ==> B8: npm start
 #
 # Có gì không hiểu ib zalo: 0936975434( Chung Đạt )
+#
