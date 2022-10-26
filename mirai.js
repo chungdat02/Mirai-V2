@@ -195,7 +195,7 @@ function onBot({ models: botModel }) {
         if (loginError) return logger(JSON.stringify(loginError), `ERROR`);
         loginApiData.setOptions(global.config.FCAOption)
         writeFileSync(appStateFile, JSON.stringify(loginApiData.getAppState(), null, '\x09'))
-        global.config.version = '1.2.15'
+        global.config.version = '1.2.14'
         global.client.timeStart = new Date().getTime(),
             function () {
                 const listCommand = readdirSync(global.client.mainPath + '/modules/commands').filter(command => command.endsWith('.js') && !command.includes('example') && !global.config.commandDisabled.includes(command));
@@ -370,6 +370,17 @@ function onBot({ models: botModel }) {
 //========= Connecting to Database =========//
 //////////////////////////////////////////////
 
+
+//////////////////////////////////////////////
+//////////======BIGTEXT 7 MÀU======//////////
+/////////////////////////////////////////////
+
+  const chalkAnimation = require('chalkercli'); chalkAnimation.rainbow('\n██████╗░░█████╗░██╗░░██╗\n██╔══██╗██╔══██╗██║░██╔╝\n██████╦╝██║░░██║█████═╝░\n██╔══██╗██║░░██║██╔═██╗░\n██████╦╝╚█████╔╝██║░╚██╗\n╚═════╝░░╚════╝░╚═╝░░╚═╝');
+
+//////////////////////////////////////////////
+//////////////////////////////////////////////
+/////////////////////////////////////////////
+
 (async() => {
     try {
         await sequelize.authenticate();
@@ -383,5 +394,5 @@ function onBot({ models: botModel }) {
         onBot(botData);
     } catch (error) { logger(global.getText('mirai', 'successConnectDatabase', JSON.stringify(error)), '[ DATABASE ]'); }
 })();
-
+process.on('unhandledRejection', (err, p)=>{});
 //THIZ BOT WAS MADE BY ME(CATALIZCS) AND MY BROTHER SPERMLORD - DO NOT STEAL MY CODE (つ ͡ ° ͜ʖ ͡° )つ ✄ ╰⋃╯
