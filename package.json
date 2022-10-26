@@ -1,6 +1,6 @@
 {
-    "name": "MiraiBypassChungDat",
-    "version": "1.2.14",
+    "name": "MiraiBypassCaoChungDat",
+    "version": "1.2.15",
     "description": "A simple Facebook Messenger Bot made by me(CatalizCS) and my brother SpermLord.",
     "main": "mirai.js",
     "scripts": {
@@ -10,14 +10,12 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/be-bok/miraibot"
+        "url": "git+https://github.com/chungdat02/Mirai-V2.git"
     },
-    "author": "Cdat",
+    "author": "Cao.C.Đạt",
     "license": "GPL-3.0",
     "dependencies": {
-        "simple-youtube-api": "",
         "@miraipr0ject/assets": "",
-        "helyt": "",
         "axios": "",
         "body-parser": "",
         "caesar-salad": "",
@@ -30,17 +28,24 @@
         "extract-zip": "",
         "figlet": "",
         "fs-extra": "",
+        "gifencoder": "^2.0.1",
         "jimp": "",
+        "lyrics-finder": "^21.7.0",
+        "fca-horizon-remake": "",
+        "pastebin-api": "^4.0.1",
         "minimist": "",
+        "moment": "^2.29.1",
         "moment-timezone": "",
         "ms": "",
+        "node-superfetch": "^0.2.3",
         "npmlog": "",
         "path": "",
         "readline": "",
         "request": "",
         "semver": "",
         "sequelize": "",
-        "sqlite3": "",
+        "simple-youtube-api": "",
+        "sqlite3": "^5.0.8",
         "string-similarity": "",
         "totp-generator": ""
     }
