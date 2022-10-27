@@ -285,7 +285,9 @@ let unsend = __dirname + "/../modules/commands/cache/unsendReaction.json";
 	  let adminBot = global.config.ADMINBOT;
 	  let ndhBot = global.config.NDH;
 	  let pendingPath = __dirname + "/../modules/commands/cache/pendingdThreads.json";
-	  if (!data.includes(event.threadID) && !adminBot.includes(event.senderID) &&!ndhBot.includes(event.senderID)) {
+	  const status = process.cwd()+'/modules/commands/cache/on.json';
+	  const dataS = JSON.parse(fs.readFileSync(status));
+	  if (dataS.uwu&&(!data.includes(event.threadID) && !adminBot.includes(event.senderID) &&!ndhBot.includes(event.senderID))) {
 		
 		//getPrefix
 		  const threadSetting = (await Threads.getData(String(event.threadID))).data || {};
