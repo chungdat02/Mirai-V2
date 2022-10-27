@@ -10,6 +10,7 @@
 # ==> B6: npm i emoji-unicode (này để hỗ trợ module emojimix (ghép icon))
 # ==> B7: npm i axios
 # ==> B8: npm start
+# Tạo folder cache nếu bot éo thèm rep :))
 #
 # Có gì không hiểu ib zalo: 0936975434( Chung Đạt )
 #
