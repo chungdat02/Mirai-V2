@@ -1,98 +1,32 @@
 module.exports.config = {
     name: "console",
     version: "1.0.0",
-    hasPermssion: 2,
-    credits: "D-Jukie",
-    description: "Console bớt nhàm chán hơn",
-    commandCategory: "other",
+    hasPermssion: 3,
+    credits: "???",
+    description: "",
+    commandCategory: "System",
     usages: "",
-    cooldowns: 5
+    cooldowns: 0
 };
-
-module.exports.handleEvent = async function ({
-    api,
-    event,
-    args,
-    Users,
-    Threads
-}) {
-    const {
-        configPath
-    } = global.client;
-    const {
-        DeveloperMode
-    } = global.config;
-    delete require.cache[require.resolve(configPath)];
-    var config = require(configPath);
-    const modDev = config.DeveloperMode
-     if ((this.config.credits) != "D-Jukie") { return }
-    if (modDev == true) return
-    else {
-   const chalk = require('chalk');
+module.exports.handleEvent = async function ({ api, args, Users, event, Threads, utils, client }) {
+    let { messageID, threadID, senderID, mentions } = event;
+    const chalk = require('chalk');
      const moment = require("moment-timezone");
-var time= moment.tz("Asia/Ho_Chi_Minh").format("DD/MM/YYYY || HH:mm:s");
-    var d = new Date();
-    const cc = d.getDay();
-    const ss = d.getYear();
-    const yy = d.getMonth();
-    switch (cc) {
-        case 0: {
-            textt = "Chủ Nhật"
-            break;
-        }
-        case 1: {
-            textt = "Thứ Hai"
-            break;
-        }
-        case 2: {
-            textt = "Thứ Ba"
-            break;
-        }
-        case 3: {
-            textt = "Thứ Bốn"
-            break;
-        }
-        case 4: {
-            textt = "Thứ Năm"
-            break;
-        }
-        case 5: {
-            textt = "Thứ Sáu"
-            break;
-        }
-        default: {
-            textt = "Thứ Bảy"
-        }
-    }
-    var msg = event.body||"Ảnh, video hoặc ký tự đặc biệt";
-    const threadInfo = await api.getThreadInfo(event.threadID)
-    var threadName = threadInfo.threadName||"Tên không tồn tại";
-    var randomColor = Math.floor(Math.random()*16777215).toString(16);
-    var randomColor1 = Math.floor(Math.random()*12345678).toString(16);
-    var randomColor2 = Math.floor(Math.random()*13245769).toString(16);
-    var randomColor3 = Math.floor(Math.random()*13333333).toString(16);
-    const name = await Users.getNameUser(event.senderID)
-    return console.log(chalk.hex("#" + randomColor)(`${threadName} `) + chalk.hex("#" + randomColor)(`|`) +chalk.hex("#" + randomColor1) (` ${name} `) + chalk.hex("#" + randomColor)(`|`) + chalk.hex("#" + randomColor2)(` ${msg} `) + chalk.hex("#" + randomColor) (`|`) + chalk.hex("#" + randomColor3)(`\n${textt} ${time}`) );
+var time= moment.tz("Asia/Ho_Chi_Minh").format("LLLL");   
+  const thread = global.data.threadData.get(event.threadID) || {};
+  if (typeof thread["console"] !== "undefined" && thread["console"] == true) return;
+  if (event.senderID == global.data.botID) return;
+  var nameBox = global.data.threadInfo.get(event.threadID).threadName || "Tên không tồn tại";
+  var nameUser = await Users.getNameUser(event.senderID)
+    var msg = event.body||"Ảnh, video hoặc kí tự đặc biệt";
+    var job = ["FF9900", "FFFF33", "33FFFF", "FF99FF", "FF3366", "FFFF66", "FF00FF", "66FF99", "00CCFF", "FF0099", "FF0066","008E97","F58220","38B6FF","7ED957"];
+    var random = 
+job[Math.floor(Math.random() * job.length)]      
+    var random1 = job[Math.floor(Math.random() * job.length)]
+   var random2 = job[Math.floor(Math.random() * job.length)]
+var random4 = job[Math.floor(Math.random() * job.length)]
+    console.log(chalk.hex("#" + random)(`𝐁𝐨𝐱: ${nameBox}`) + " | " + chalk.hex("#" + random1)(`\n𝐍𝐚𝐦𝐞: ${nameUser}`) + " | " + chalk.hex("#" + random2)(`\n𝐓𝐞𝐱𝐭: ${msg}`) + `\n` + chalk.hex("#" + random4)(`[🌸] ─────────────────────── [🌸]`)); 
 }
-}
-module.exports.run = async ({
-    api,
-    event,
-    args
-}) => {
-    if ((this.config.credits) != "D-Jukie") { return api.sendMessage(`⚡️Phát hiện credits đã bị thay đổi`, event.threadID, event.messageID)}
-    const {
-        configPath
-    } = global.client;
-    const {
-        DeveloperMode
-    } = global.config;
-    delete require.cache[require.resolve(configPath)];
-    var config = require(configPath);
-    const modDev = config.DeveloperMode
-
-    if (modDev == true) {
-        api.sendMessage(`🐧DeveloperMode: ${modDev}\n🐧Vui lòng chỉnh về false để sử dụng!!!`, event.threadID)
-    } else
-        return api.sendMessage(`🐧DeveloperMode: ${modDev}\n🐧Console đang chạy...`, event.threadID)
-}
+module.exports.run = async function ({ api, args, Users, event, Threads, utils, client }) {
+  
+               }
