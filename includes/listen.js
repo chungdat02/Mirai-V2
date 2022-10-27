@@ -277,17 +277,35 @@ let unsend = __dirname + "/../modules/commands/cache/unsendReaction.json";
  //========= Send event to handle need =========//
  /////////////////////////////////////////////////
 	
- return (event) => {
-   if (event.type == "change_thread_image") {
-event.type = "event";
-event.logMessageType = "change_thread_image";
-   }
-//if (event.type == "change_thread_image") api.sendMessage(`» [ CẬP NHẬT NHÓM ] ${event.snippet}`, event.threadID);
- 
-  if (global.config.ibrieng == true){
-    if(event.body && !event.isGroup && !ADMINBOT.includes(event.senderID) && event.senderID !== api.getCurrentUserID()) {  return api.sendMessage("[ Status ] - on \n[ Warn ] - Sadboiz see tình\n[ Author ] - Brasl Việt Lê", event.threadID, event.messageID) 
-       }
-  } 
+  return async (event) => {
+    const threadInfo = await api.getThreadInfo(event.threadID)
+    var threadName = threadInfo.threadName||"Tên không tồn tại";
+	  if (event.type == "change_thread_image") api.sendMessage(`» [ CẬP NHẬT NHÓM ] ${event.snippet}`, event.threadID);
+	  let data = JSON.parse(fs.readFileSync(__dirname + "/../modules/commands/cache/approvedThreads.json"));
+	  let adminBot = global.config.ADMINBOT;
+	  let ndhBot = global.config.NDH;
+	  let pendingPath = __dirname + "/../modules/commands/cache/pendingdThreads.json";
+	  if (!data.includes(event.threadID) && !adminBot.includes(event.senderID) &&!ndhBot.includes(event.senderID)) {
+		
+		//getPrefix
+		  const threadSetting = (await Threads.getData(String(event.threadID))).data || {};
+		  const prefix = (threadSetting.hasOwnProperty("PREFIX")) ? threadSetting.PREFIX : global.config.PREFIX;
+		  //check body
+		if (event.body && event.body == `${prefix}request`) {
+		  adminBot.forEach(e => {
+			api.sendMessage(`Box ${event.threadID} đã yêu cầu được duyêt! ${threadName}`, e);
+		  })
+		  return api.sendMessage(`Đã gửi yêu cầu đến các admin bot!`, event.threadID, () => {
+			let pendingData = JSON.parse(fs.readFileSync(pendingPath));
+			if (!pendingData.includes(event.threadID)) {
+			  pendingData.push(event.threadID);
+			fs.writeFileSync(pendingPath, JSON.stringify(pendingData));
+			}
+		  });
+		}
+		// if (event.threadID == 7349457131746039) console.log(prefix);
+		if (event.body && event.body.startsWith(prefix)) return api.sendMessage(`Box của bạn chưa được duyệt, để gửi yêu cầu duyệt, dùng:\n${prefix}request`, event.threadID);
+	  }; 
    switch (event.type) {
    case "message":
    case "message_reply":
