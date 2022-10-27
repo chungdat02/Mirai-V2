@@ -1,13 +1,13 @@
 module.exports = function ({ api, models, Users, Threads, Currencies }) {
+  const fs = require("fs");
   const stringSimilarity = require('string-similarity'),
     escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
     logger = require("../../utils/log.js");
-  const axios = require('axios')
   const moment = require("moment-timezone");
   return async function ({ event }) {
-    const dateNow = Date.now()
+    const dateNow = Date.now();
     const time = moment.tz("Asia/Ho_Chi_minh").format("HH:MM:ss DD/MM/YYYY");
-    const { allowInbox, PREFIX, ADMINBOT, NDH, DeveloperMode, adminOnly, keyAdminOnly, ndhOnly } = global.config;
+    const { allowInbox, PREFIX, ADMINBOT, NDH, DeveloperMode, adminOnly, keyAdminOnly, ndhOnly, adminPaseOnly } = global.config;
     const { userBanned, threadBanned, threadInfo, threadData, commandBanned } = global.data;
     const { commands, cooldowns } = global.client;
     var { body, senderID, threadID, messageID } = event;
@@ -17,19 +17,14 @@ module.exports = function ({ api, models, Users, Threads, Currencies }) {
     const prefixRegex = new RegExp(`^(<@!?${senderID}>|${escapeRegex((threadSetting.hasOwnProperty("PREFIX")) ? threadSetting.PREFIX : PREFIX)})\\s*`);
     if (!prefixRegex.test(body)) return;
     const adminbot = require('./../../config.json');
-
-    if (!ADMINBOT.includes(senderID) && adminbot.adminOnly == true) {
-      if (!ADMINBOT.includes(senderID) && adminbot.adminOnly == true) return api.sendMessage('𝗠𝗢𝗗𝗘 - Hiện tại đang kích hoạt chế độ vô cực, chỉ Admin được sử dụng Bot', threadID, messageID)
-    }
-    if (!NDH.includes(senderID) && !ADMINBOT.includes(senderID) && adminbot.ndhOnly == true) {
-      if (!NDH.includes(senderID) && !ADMINBOT.includes(senderID) && adminbot.ndhOnly == true) return api.sendMessage('𝗠𝗢𝗗𝗘 - Hiện tại đang kích hoạt chế độ Người hỗ trợ, chỉ Người hỗ trợ được sử dụng Bot', threadID, messageID)
-    }
     
+if (!global.data.allThreadID.includes(threadID) && !ADMINBOT.includes(senderID) && adminbot.adminPaseOnly == true) return api.sendMessage("[ MODE ] - Chỉ admin mới được sử dụng bot trong chat riêng.", threadID, messageID)    
+if (!ADMINBOT.includes(senderID) && adminbot.adminOnly == true) return api.sendMessage('[ MODE ] - Chỉ admin bot mới có thể sử dụng bot', threadID, messageID)
+if (!NDH.includes(senderID) && !ADMINBOT.includes(senderID) && adminbot.ndhOnly == true) return api.sendMessage('[ MODE ] - Chỉ người hỗ trợ bot mới có thể sử dụng bot', threadID, messageID)
     const dataAdbox = require('./../../modules/commands/cache/data.json');
     var threadInf = (threadInfo.get(threadID) || await Threads.getInfo(threadID));
     const findd = threadInf.adminIDs.find(el => el.id == senderID);
-    if (dataAdbox.adminbox.hasOwnProperty(threadID) && dataAdbox.adminbox[threadID] == true && !ADMINBOT.includes(senderID) && !findd && event.isGroup == true && !NDH.includes(senderID) && !findd && event.isGroup == true) return api.sendMessage('𝗠𝗢𝗗𝗘 - Hiện tại đang kích hoạt chế độ Quản trị viên, chỉ Quản trị viên được sử dụng Bot', event.threadID, event.messageID)
-    
+    if (dataAdbox.adminbox.hasOwnProperty(threadID) && dataAdbox.adminbox[threadID] == true && !ADMINBOT.includes(senderID) && !findd && event.isGroup == true) return api.sendMessage('[ MODE ] - Chỉ admin nhóm mới được sử dụng bot!!', event.threadID, event.messageID)
     if (userBanned.has(senderID) || threadBanned.has(threadID) || allowInbox == ![] && senderID == threadID) {
       if (!ADMINBOT.includes(senderID.toString())) {
         if (userBanned.has(senderID)) {
@@ -54,14 +49,12 @@ module.exports = function ({ api, models, Users, Threads, Currencies }) {
     commandName = args.shift().toLowerCase();
     var command = commands.get(commandName);
     if (!command) {
-      const threadSetting=(await Threads.getData(String(event.threadID))).data || {};
-      const prefixBox = (threadSetting.hasOwnProperty("PREFIX")) ? threadSetting.PREFIX : global.config.PREFIX;
       var allCommandName = [];
       const commandValues = commands['keys']();
       for (const cmd of commandValues) allCommandName.push(cmd)
       const checker = stringSimilarity.findBestMatch(commandName, allCommandName);
       if (checker.bestMatch.rating >= 0.5) command = client.commands.get(checker.bestMatch.target);
-      else return api.sendMessage(global.getText("handleCommand", "commandNotExist",prefixBox, checker.bestMatch.target), threadID);
+      else return api.sendMessage(global.getText("handleCommand", "commandNotExist", checker.bestMatch.target), threadID);
     }
     if (commandBanned.get(threadID) || commandBanned.get(senderID)) {
       if (!ADMINBOT.includes(senderID)) {
@@ -79,7 +72,7 @@ module.exports = function ({ api, models, Users, Threads, Currencies }) {
           }, messageID);
       }
     }
-    if (command.config.commandCategory.toLowerCase() == 'game' && !global.data.threadAllowNSFW.includes(threadID) && !ADMINBOT.includes(senderID))
+    if (command.config.commandCategory.toLowerCase() == 'nsfw' && !global.data.threadAllowNSFW.includes(threadID) && !ADMINBOT.includes(senderID))
       return api.sendMessage(global.getText("handleCommand", "threadNotAllowNSFW"), threadID, async (err, info) => {
 
         await new Promise(resolve => setTimeout(resolve, 5 * 1000))
@@ -100,13 +93,13 @@ module.exports = function ({ api, models, Users, Threads, Currencies }) {
     if (ADMINBOT.includes(senderID.toString())) permssion = 3;
     else if (!ADMINBOT.includes(senderID) && !NDH.includes(senderID) && find) permssion = 1;
     if (command.config.hasPermssion > permssion) return api.sendMessage(global.getText("handleCommand", "permssionNotEnough", command.config.name), event.threadID, event.messageID);
-     
-       if (!client.cooldowns.has(command.config.name)) client.cooldowns.set(command.config.name, new Map());
+
+          if (!client.cooldowns.has(command.config.name)) client.cooldowns.set(command.config.name, new Map());
         const timestamps = client.cooldowns.get(command.config.name);;
         const expirationTime = (command.config.cooldowns || 1) * 1000;
         if (timestamps.has(senderID) && dateNow < timestamps.get(senderID) + expirationTime) 
-      return api.sendMessage("𝗠𝗢𝗗𝗘 - Bạn hiện đang trong thời gian chờ lệnh, vui lòng thử lại sau", threadID, messageID);
-
+      return api.sendMessage(`⏱ Bạn đang trong thời gian chờ!\n Vui lòng thử lại sau ${((timestamps.get(senderID) + expirationTime - dateNow)/1000).toString().slice(0, 5)}s nữa nhé`, threadID, messageID);
+    
     var getText2;
     if (command.languages && typeof command.languages == 'object' && command.languages.hasOwnProperty(global.config.language))
       getText2 = (...values) => {
