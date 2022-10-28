@@ -1,5 +1,5 @@
 module.exports.config = {
-    name: 'joinfb',
+    name: 'uid',
     version: '1.1.1',
     hasPermssion: 0,
     credits: 'leak cc dm',
