@@ -5,12 +5,14 @@
 # ==> B1: npm i
 # ==> B2: npm i fca-horizon-remake
 # ==> B3: npm i sqlite3
-# ==> B4: npm i canvas@2.9.0 (có nh` bản canvas nh tui dùng bản 2.9.0)
-# ==> B5: npm i ytdl-core (này là để hỗ trợ cho module sing + video)
-# ==> B6: npm i emoji-unicode (này để hỗ trợ module emojimix (ghép icon))
-# ==> B7: npm i axios
-# ==> B8: npm audit fix 
-# ==> B9: npm start
+# ==> B4: npm i axios
+# ==> B5: npm i audit fix
+# ==> B6: npm start
+# Các package hỗ trợ:
+# ==> B6: npm i canvas@2.9.0 (có nh` bản canvas nh tui dùng bản 2.9.0)
+# ==> B7: npm i ytdl-core (này là để hỗ trợ cho module sing + video)
+# ==> B8: npm i emoji-unicode (này để hỗ trợ module emojimix (ghép icon))
+#
 # facebook: https://www.facebook.com/cntt2410.hacker 
 # Có gì không hiểu ib zalo: 0936975434( Chung Đạt )
 #
