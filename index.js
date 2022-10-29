@@ -21,7 +21,7 @@ const logger = require("./utils/log");
 
 const dashboard = http.createServer(function (_req, res) {
     res.writeHead(200, "OK", { "Content-Type": "text/plain" });
-    res.write("WELCOME BACK Nam <3");
+    res.write("WELCOME BACK CHUNG ĐẠT. OH YEAH");
     res.end();
 });
 
