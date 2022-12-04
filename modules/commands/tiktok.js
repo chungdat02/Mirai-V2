@@ -1,3 +1,4 @@
+/* tôi sẽ update bản có tiktok post và tiktok trending sau */
 module.exports.config = {
     name: "tiktok",
     version: "1.1.12",
@@ -22,7 +23,7 @@ try {
     case "v":{
        const link = args[1];
       if (!link) return api.sendMessage("link ???", threadID);
-const res = await axios.get(`https://api-caochungdat.bokdepzai.repl.co/tiktok/download?url=${link}`);
+const res = await axios.get(`https://caochungdat.me/docs/tiktok/downloader?url=${link}`);
 const url = res.data.data.play;
   const str = res.data.data.title;
 const hastag = str.split(' ').filter(i => i.startsWith('#')).join(', ');
@@ -36,7 +37,7 @@ const hastag = str.split(' ').filter(i => i.startsWith('#')).join(', ');
    case "a":{
     const link = args[1];
           if (!link) return api.sendMessage("link đâu", threadID);
-const res = await axios.get(`https://api-caochungdat.bokdepzai.repl.co/tiktok/download?url=${link}`);
+const res = await axios.get(`https://caochungdat.me/docs/tiktok/downloader?url=${link}`);
 var url = res.data.data.music;
        var callback = () => api.sendMessage({body:`Nhạc dùng từ:\n-->ID: ${res.data.data.music_info.id}-->${res.data.data.music_info.author}\n-->${res.data.data.music_info.title}`,attachment: fs.createReadStream(__dirname + "/cache/tkvd.mp3")}, event.threadID, () => fs.unlinkSync(__dirname + "/cache/tkvd.mp3"),event.messageID);
 	 return request(encodeURI(`${url}`)).pipe(fs.createWriteStream(__dirname+'/cache/tkvd.mp3')).on('close',() => callback());  
@@ -47,7 +48,7 @@ var url = res.data.data.music;
     case "i":{
       const username = args[1];
       if (!username) return api.sendMessage("con mẹ m info đâu", threadID);
-       const res = await axios.get(`https://api-caochungdat.bokdepzai.repl.co/tiktok/infouser?user=${username}`);
+       const res = await axios.get(`https://caochungdat.me/docs/tiktok/infouser?user=${username}`);
       var url1 = res.data.data.user.avatarLarger;
   var callback = () => api.sendMessage({body:`Name:${res.data.data.user.nickname}\nTiểu sử: ${res.data.data.user.signature}\nFL:${res.data.data.stats.followerCount}\nĐang fl:${res.data.data.stats.followingCount}\nThích:${res.data.data.stats.heart}\nSố video:${res.data.data.stats.videoCount}`,attachment: fs.createReadStream(__dirname + "/cache/tkinfo.png")}, event.threadID, () => fs.unlinkSync(__dirname + "/cache/tkinfo.png"),event.messageID);
 	 return request(encodeURI(`${url1}`)).pipe(fs.createWriteStream(__dirname+'/cache/tkinfo.png')).on('close',() => callback());  
@@ -58,7 +59,7 @@ var url = res.data.data.music;
   case "s":{
       const search = args[1];
       if (!search) return api.sendMessage("Bạn chưa nhập từ khóa", threadID);
-  const res = await axios.get(`https://api-caochungdat.bokdepzai.repl.co/tiktok/search?keywords=${search}`);
+  const res = await axios.get(`https://caochungdat.me/docs/tiktok/search?keywords=${search}`);
    const BoK = res.data.data.videos;
     var text = '';
     for ( let i = 0; i < 10; i++) {
