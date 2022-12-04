@@ -21,7 +21,7 @@ module.exports.run = async function ({ api, event, args, Currencies, Users }) {
     if (money < 30 || isNaN(money)) return api.sendMessage("Mức đặt cược của bạn không phù hợp hoặc dưới 30$!!!", threadID, messageID);
     if (moneyUser < money) return api.sendMessage(`⚡️Số dư bạn không đủ ${money}$ để có thể chơi`, threadID, messageID);
     try {
-        const res = await axios.get(`https://api-caochungdat.bokdepzai.repl.co/game/tx`);
+        const res = await axios.get(`https://caochungdat.me/docs/game/taixiu`);
         const images = [];
         const result = res.data.result;
         for (var i in res.data.images) {
