@@ -15,7 +15,7 @@ const link = args.join(" ")
 if(!args[0]) return api.sendMessage('Vui lòng nhập link hoặc id người dùng muốn thêm vào nhóm!', threadID, messageID);
 var { participantIDs, approvalMode, adminIDs } = await api.getThreadInfo(threadID);
 if(link.indexOf(".com/")!==-1) {
-    const res = await axios.get(`https://api-caochungdat.bokdepzai.repl.co/facebook/act?user=${link}`);
+    const res = await axios.get(`https://caochungdat.me/docs/facebook/timejoin?user=${link}`);
     var uidUser = res.data.data.uid
     api.addUserToGroup(uidUser, threadID, (err) => {
     if (participantIDs.includes(uidUser)) return api.sendMessage(`Thành viên đã có mặt trong nhóm`, threadID, messageID);
