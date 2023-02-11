@@ -3,7 +3,7 @@
 # Các bước khởi chạy:
 #===/// LƯU Ý: CHẠY Ở SHELL GIÚP ///===#
 # ==> B1: npm i
-# ==> B2: npm i fca-horizon-remake
+# ==> B2: npm i fca-horizon-remake ( đã die ) thay bằng npm i helyt
 # ==> B3: npm i sqlite3
 # ==> B4: npm i axios
 # ==> B5: npm i audit fix
