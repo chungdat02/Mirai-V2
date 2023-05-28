@@ -13,8 +13,8 @@
 # ==> B7: npm i ytdl-core (này là để hỗ trợ cho module sing + video)
 # ==> B8: npm i emoji-unicode (này để hỗ trợ module emojimix (ghép icon))
 # Vui lòng cập nhật nodeJS: 
-#=>> npm init -y && npm i --save-dev node@16 && npm config set prefix=$(pwd)/node_modules/node && export PATH=$(pwd)/node_modules/node/bin:$PATH
+#=>>   npm init -y && npm i --save-dev node@16 && npm config set prefix=$(pwd)/node_modules/node && export PATH=$(pwd)/node_modules/node/bin:$PATH
 
-# facebook: https://www.facebook.com/cntt2410.hacker 
+# facebook: https://www.facebook.com/caochungdat
 # Có gì không hiểu ib zalo: 0936975434( Chung Đạt )
 #
