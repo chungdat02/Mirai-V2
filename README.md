@@ -7,7 +7,7 @@
 
 >  **TRƯỚC KHI CHẠY BOT CÁC BẠN PHẢI CHẤP NHẬN VIỆC ACC FACEBOOK BỊ QUÉT VÀ DIE, MỌI KHIẾU NẠI VỀ ACC FACEBOOK BÊN MÌNH KHÔNG CHỊU TRÁCH NHIỆM**
 
-<h1>Đối với Replit - Dùng trên ĐT hoặc PC</h1> 
+<h1>Hướng dẫn chạy ở [Replit](https://replit.com/) và CMD</h1> 
 
 **Đối với [Replit](https://replit.com)**
 
@@ -18,7 +18,7 @@
 - Nhập link **github** này vào **from** và **click** vào nút **Import from github**
 - Đợi repl **Loading...**
 
-- **LƯU Ý: NẾU CÓ REPL PRO/HACKER THÌ CHỌN PRIVATE TRÁNH BỊ MÒ FILE NHÉ**
+**LƯU Ý: NẾU CÓ REPL PRO/HACKER THÌ CHỌN PRIVATE TRÁNH BỊ MÒ FILE NHÉ**
 
 **Cách cài đặt - gõ từng lệnh theo thứ tự dưới đây và đợi cài đặt**
 
@@ -48,4 +48,4 @@
 &nbsp; <a href="https://www.facebook.com/caochungdat" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/plasticine/100/000000/facebook.png"  width="90" /></a>
 &nbsp; <a href="chungdatcntt1808@gmail.com" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/plasticine/100/000000/gmail.png"  width="90" /></a>
 </p>
-<h1 text-align="center">Thank To </h1>
+<h1><center>Thank To <center></h1>
