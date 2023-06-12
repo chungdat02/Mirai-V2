@@ -1,7 +1,7 @@
 <h1> Xin chào bạn trước màn hình 🍑 <img src="https://i.pinimg.com/736x/26/07/14/260714a0ef6c40c9ceca632da04c0332.jpg" width="37"></h1> 
 
 <p align="center">
-    <img align="center" alt="PNG" src="https://c.tenor.com/KhGC_UueKfAAAAAd/kamadonezuko-nezuko.gif" />
+    <img align="center" alt="PNG" src="https://i.pinimg.com/originals/d8/e7/79/d8e779333b1a7b1e1468c2f5f4d1df9b.gif" />
 </p> 
 <h1>HƯỚNG DẪN CÁCH CÀI ĐẶT BOT MESSENGER TRÊN CÁC NỀN TẢNG</h1>
 
@@ -13,10 +13,12 @@
 
 **Thứ tự các thao tác trên [Replit](https://replit.com/)**
 - Cần chuẩn bị 1 tài khoản [Replit](https://replit.com/)
-- **+ New repl**
+- Chọn **Create Repl**
 - Qua tab **Import from github** 
 - Nhập link **github** này vào **from** và **click** vào nút **Import from github**
 - Đợi repl **Loading...**
+
+- **LƯU Ý: NẾU CÓ REPL PRO/HACKER THÌ CHỌN PRIVATE TRÁNH BỊ MÒ FILE NHÉ**
 
 **Cách cài đặt - gõ từng lệnh theo thứ tự dưới đây và đợi cài đặt**
 
@@ -40,10 +42,10 @@
 
 # 🤝🏻 Connect
 <p align="center"> 
-&nbsp; <a href="https://www.instagram.com/caochungdat/" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/plasticine/100/000000/instagram-new.png" width="100" /></a> 
-&nbsp; <a href="https://www.tiktok.com/@caochungdat" target="_blank" rel="noopener noreferrer"><img src="https://i.imgur.com/jcWPUix.png" width="100" /></a>    
-&nbsp; <a href="https://github.com/chungdat02" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/plasticine/100/000000/github.png" width="100" /></a>
-&nbsp; <a href="https://www.facebook.com/caochungdat" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/plasticine/100/000000/facebook.png"  width="100" /></a>
-&nbsp; <a href="chungdatcntt1808@gmail.com" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/plasticine/100/000000/gmail.png"  width="100" /></a>
+&nbsp; <a href="https://www.instagram.com/caochungdat/" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/plasticine/100/000000/instagram-new.png" width="90" /></a> 
+&nbsp; <a href="https://www.tiktok.com/@caochungdat" target="_blank" rel="noopener noreferrer"><img src="https://i.imgur.com/jcWPUix.png" width="90" /></a>    
+&nbsp; <a href="https://github.com/chungdat02" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/plasticine/100/000000/github.png" width="90" /></a>
+&nbsp; <a href="https://www.facebook.com/caochungdat" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/plasticine/100/000000/facebook.png"  width="90" /></a>
+&nbsp; <a href="chungdatcntt1808@gmail.com" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/plasticine/100/000000/gmail.png"  width="90" /></a>
 </p>
-<h1>Thank To </h1>
+<h1 style="center" >Thank To </h1>
