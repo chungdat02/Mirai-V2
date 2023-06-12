@@ -7,7 +7,7 @@
 
 >  **TRƯỚC KHI CHẠY BOT CÁC BẠN PHẢI CHẤP NHẬN VIỆC ACC FACEBOOK BỊ QUÉT VÀ DIE, MỌI KHIẾU NẠI VỀ ACC FACEBOOK BÊN MÌNH KHÔNG CHỊU TRÁCH NHIỆM**
 
-<h1>Hướng dẫn chạy ở [Replit](https://replit.com/) và CMD</h1> 
+<h1>Hướng dẫn chạy ở Replit và CMD</h1> 
 
 **Đối với [Replit](https://replit.com)**
 
