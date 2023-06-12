@@ -48,4 +48,4 @@
 &nbsp; <a href="https://www.facebook.com/caochungdat" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/plasticine/100/000000/facebook.png"  width="90" /></a>
 &nbsp; <a href="chungdatcntt1808@gmail.com" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/plasticine/100/000000/gmail.png"  width="90" /></a>
 </p>
-<h1 style="center" >Thank To </h1>
+<h1 text-align="center">Thank To </h1>
