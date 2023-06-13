@@ -40,7 +40,7 @@
 - **npm audit fix**
 - **node index.js** 
 
-** cách câu lệnh giúp ích cho bạn**
+**Các câu lệnh giúp ích cho bạn**
 - Kiểm tra phiên bản cài đặt NPM: **npm --v**
 - Update node: **npm init -y && npm i --save-dev node@18 && npm config set prefix=$(pwd)/node_modules/node && export PATH=$(pwd)/node_modules/node/bin:$PATH**
 - Liệt kê tất cả các cấu hình cho NPM: **npm config ls -l**
