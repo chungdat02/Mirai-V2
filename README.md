@@ -16,14 +16,15 @@
 - Chọn **Create Repl**
 - Qua tab **Import from github** 
 - Nhập link **github** này vào **from** và **click** vào nút **Import from github**
-- Đợi repl **Loading...**
+- Đợi repl **Importing...**
 
 **LƯU Ý: NẾU CÓ REPL PRO/HACKER THÌ CHỌN PRIVATE TRÁNH BỊ MÒ FILE NHÉ**
 
 **Cách cài đặt - gõ từng lệnh theo thứ tự dưới đây và đợi cài đặt**
 
 - Chuyển qua tab **Shell** và gõ các lệnh theo thứ tự sau:
-- **npm i** 
+- **npm i**
+- **npm i fca-horizon-remastered** 
 - **npm audit fix**
 - **Ấn nút run trên màn hình** - hoặc **npm start**
 
@@ -41,11 +42,11 @@
 
 
 # 🤝🏻 Connect
-<p align="center"> 
-&nbsp; <a href="https://www.instagram.com/caochungdat/" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/plasticine/100/000000/instagram-new.png" width="90" /></a> 
-&nbsp; <a href="https://www.tiktok.com/@caochungdat" target="_blank" rel="noopener noreferrer"><img src="https://i.imgur.com/jcWPUix.png" width="90" /></a>    
-&nbsp; <a href="https://github.com/chungdat02" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/plasticine/100/000000/github.png" width="90" /></a>
+<p align="center">  
 &nbsp; <a href="https://www.facebook.com/caochungdat" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/plasticine/100/000000/facebook.png"  width="90" /></a>
+&nbsp; <a href="https://github.com/chungdat02" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/plasticine/100/000000/github.png" width="90" /></a>
+&nbsp; <a href="https://www.instagram.com/caochungdat/" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/plasticine/100/000000/instagram-new.png" width="90" /></a>  
+&nbsp; <a href="https://www.tiktok.com/@caochungdat" target="_blank" rel="noopener noreferrer"><img src="https://i.imgur.com/jcWPUix.png" width="90" /></a>  
 &nbsp; <a href="chungdatcntt1808@gmail.com" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/plasticine/100/000000/gmail.png"  width="90" /></a>
 </p>
-<h1><center>Thank To <center></h1>
+    <h1><center>Thank To <center></h1>
