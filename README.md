@@ -37,6 +37,7 @@
 
 - Nhập các lệnh như sau:
 - **npm i** 
+- **npm i fca-horizon-remastered**
 - **npm audit fix**
 - **node index.js** 
 
