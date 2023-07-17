@@ -1,4 +1,4 @@
-<h1> Xin chào bạn trước màn hình 🍑 <img src="https://i.pinimg.com/736x/26/07/14/260714a0ef6c40c9ceca632da04c0332.jpg" width="37"></h1> 
+<h1> Xin chào bạn trước màn hình 🍑 <img src="https://i.imgur.com/b7BPW9e.png" width="37"></h1> 
 
 <p align="center">
     <img align="center" alt="PNG" src="https://i.pinimg.com/originals/d8/e7/79/d8e779333b1a7b1e1468c2f5f4d1df9b.gif" />
