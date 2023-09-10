@@ -46,7 +46,8 @@
 - Update node: **npm init -y && npm i --save-dev node@18 && npm config set prefix=$(pwd)/node_modules/node && export PATH=$(pwd)/node_modules/node/bin:$PATH**
 - Liệt kê tất cả các cấu hình cho NPM: **npm config ls -l**
 - Xem package: **npm view <name package>**
-- Cập nhật dev packages: **npm update --dev**    
+- Cập nhật dev packages: **npm update --dev** 
+- Xem bản nodeJS mới nhất **npm view node version**   
 
 # 🤝🏻 Connect
 <p align="center">  
