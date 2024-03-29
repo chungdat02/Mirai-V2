@@ -1,8 +1,9 @@
+>  **HIỆN TẠI PRJ CHƯA UPDATE VÌ QUÁ BẬN HỌC SORRY**
 <h1> Xin chào bạn trước màn hình 🍑 <img src="https://i.imgur.com/b7BPW9e.png" width="37"></h1> 
 
-/*<p align="center">
+<p align="center">
     <img align="center" alt="PNG" src="https://i.imgur.com/b7BPW9e.png" />
-</p> */
+</p>
 <h1>HƯỚNG DẪN CÁCH CÀI ĐẶT BOT MESSENGER TRÊN CÁC NỀN TẢNG</h1>
 
 >  **TRƯỚC KHI CHẠY BOT CÁC BẠN PHẢI CHẤP NHẬN VIỆC ACC FACEBOOK BỊ QUÉT VÀ DIE, MỌI KHIẾU NẠI VỀ ACC FACEBOOK BÊN MÌNH KHÔNG CHỊU TRÁCH NHIỆM**
