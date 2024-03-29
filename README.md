@@ -1,8 +1,8 @@
 <h1> Xin chào bạn trước màn hình 🍑 <img src="https://i.imgur.com/b7BPW9e.png" width="37"></h1> 
 
-<p align="center">
-    <img align="center" alt="PNG" src="https://i.pinimg.com/originals/d8/e7/79/d8e779333b1a7b1e1468c2f5f4d1df9b.gif" />
-</p> 
+//<p align="center">
+//    <img align="center" alt="PNG" src="https://i.pinimg.com/originals/d8/e7/79/d8e779333b1a7b1e1468c2f5f4d1df9b.gif" />
+//</p> 
 <h1>HƯỚNG DẪN CÁCH CÀI ĐẶT BOT MESSENGER TRÊN CÁC NỀN TẢNG</h1>
 
 >  **TRƯỚC KHI CHẠY BOT CÁC BẠN PHẢI CHẤP NHẬN VIỆC ACC FACEBOOK BỊ QUÉT VÀ DIE, MỌI KHIẾU NẠI VỀ ACC FACEBOOK BÊN MÌNH KHÔNG CHỊU TRÁCH NHIỆM**
